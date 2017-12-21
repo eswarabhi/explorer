@@ -1,0 +1,14 @@
+Changelog
+=========
+
+### CraftAR Javascript Image Recognition
+
+###### version 1.2
+* Changed: Image is now called CraftARImage.
+* Fixed: Image Selector throwing: “Uncaught TypeError: e.parseMetaData is not a function”
+
+###### version 1.1
+* Added: Camera capture in Safari 11: now you can open the camera directly in this browser.
+
+###### version 1.0
+* Updated: It now supports being imported in modern Javascript module systems (CommonJS, AMD, ES2015 and ES2016) like those used by RequireJS and Webpack

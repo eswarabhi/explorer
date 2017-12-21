@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Class: Image</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/jaguar.css">
+    
+    
+    <script>
+    var config = {"monospaceLinks":true,"cleverLinks":true,"default":{"outputSourceFiles":false},"applicationName":"CraftAR.js"};
+    </script>
+    
+
+    
+</head>
+<body>
+<div id="wrap" class="clearfix">
+    
+<div class="navigation">
+    <h3 class="applicationName"><a href="index.html">CraftAR.js</a></h3>
+
+    <div class="search">
+        <input id="search" type="text" class="form-control input-sm" placeholder="Search Documentations">
+    </div>
+    <ul class="list">
+    
+        <li class="item" data-name="craftar">
+            <span class="title">
+                <a href="craftar.html">craftar</a>
+                
+                <span class="static">static</span>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li data-name="craftar.version"><a href="craftar.html#version">version</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="craftar.supportsCapture"><a href="craftar.html#supportsCapture">supportsCapture</a></li>
+            
+                <li data-name="craftar.supportsImageSelector"><a href="craftar.html#supportsImageSelector">supportsImageSelector</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="craftar.Capture">
+            <span class="title">
+                <a href="craftar.Capture.html">craftar.Capture</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            <span class="subtitle">Events</span>
+            
+                <li data-name="craftar.Capture#event:error"><a href="craftar.Capture.html#event:error">error</a></li>
+            
+                <li data-name="craftar.Capture#event:started"><a href="craftar.Capture.html#event:started">started</a></li>
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="craftar.CloudRecognition">
+            <span class="title">
+                <a href="craftar.CloudRecognition.html">craftar.CloudRecognition</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            <span class="subtitle">Events</span>
+            
+                <li data-name="craftar.CloudRecognition#event:finished"><a href="craftar.CloudRecognition.html#event:finished">finished</a></li>
+            
+                <li data-name="craftar.CloudRecognition#event:results"><a href="craftar.CloudRecognition.html#event:results">results</a></li>
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="craftar.Image">
+            <span class="title">
+                <a href="craftar.Image.html">craftar.Image</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="craftar.Image#getImage"><a href="craftar.Image.html#getImage">getImage</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="craftar.ImageSelector">
+            <span class="title">
+                <a href="craftar.ImageSelector.html">craftar.ImageSelector</a>
+                
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li data-name="craftar.ImageSelector.ImageSelector.create"><a href="craftar.ImageSelector.html#ImageSelector.create">ImageSelector.create</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            <span class="subtitle">Events</span>
+            
+                <li data-name="craftar.ImageSelector#event:error"><a href="craftar.ImageSelector.html#event:error">error</a></li>
+            
+                <li data-name="craftar.ImageSelector#event:image"><a href="craftar.ImageSelector.html#event:image">image</a></li>
+            
+            </ul>
+        </li>
+    
+    </ul>
+</div>
+    <div class="main">
+        <h1 class="page-title" data-filename="craftar.Image.html">Class: Image</h1>
+        
+
+
+
+<section>
+    
+<header>
+    <h2>
+        <span class="ancestors"><a href="craftar.html">craftar</a>.</span>
+    
+    Image
+    </h2>
+    
+</header>  
+
+<article>
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Image">
+            
+            new craftar.Image<span class="signature">()</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            Image.js, line 14
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Image
+    A craftar image encapsulates the images captured using the Image Selector or the Capture in a class
+    that the CloudRecognition module can use for performing visual recognition queries. It also
+    gives access to an Image object that can be added to a view element.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="getImage">
+            
+            getImage<span class="signature">(callback)</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            Image.js, line 61
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Allows access to an Image object.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>called with the Image when it is loaded</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+    
+    
+</article>
+
+</section>  
+
+
+
+
+
+        
+
+        <footer>
+            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a> on Mon Dec 11 2017 16:46:54 GMT+0100 (CET)
+        </footer>
+    </div>
+</div>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

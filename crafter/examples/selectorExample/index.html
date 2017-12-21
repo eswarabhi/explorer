@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html en-US >
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="catchoom.com">
+	<meta name="description" content="Demo for IR">
+	<meta name="dcterms.rights" content="All rights reserved">
+	<meta name="dcterms.dateCopyrighted" content="2014">
+	<link rel="stylesheet" type="text/css" media="all" href="./css/style.css" />
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+	<script src="./js/jquery-2.1.3.min.js"></script>
+	<script src="./js/jquery.prettyfile.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/handlebars-v2.0.0.js"></script>
+
+    <script src="./js/craftar.min.js"></script>
+
+	<script id="resultTemplate" type="text/x-handlebars-template">
+		<li><a href="{{itemUrl}}" target="_blank"><div id="thumbContainer"><img src="{{thumbnailUrl}}"><span>{{itemName}}</span></div></a></li>
+	</script>
+
+
+  <script>
+    window.addEventListener("load", function() {
+
+        $("#selectorElement").prettyfile({
+            html: "Choose an image"
+        });
+
+    	if (!craftar.supportsImageSelector()) {
+    		alert("Support Error!");
+    	}
+
+    	var selectorElement = document.getElementById('selectorElement');
+    	var spinnerElement = document.getElementById('spinner');
+
+		var selector = new craftar.ImageSelector(selectorElement);
+		var cloudRecognition =  new craftar.CloudRecognition({token: "catchoomcooldemo"});
+		var resultsElement = document.getElementById( 'resultList' );
+
+		cloudRecognition.addListener('results', function(error, results, xhr) {
+			if (results.results && results.results.length > 0) {
+				var resultItem = results.results[0];
+
+				var template = document.getElementById("resultTemplate");
+				var itemHTML =  Handlebars.compile(template.innerHTML);
+
+				var resultEl = document.createElement('div');
+				resultEl.innerHTML = itemHTML({thumbnailUrl: resultItem.image.thumb_120, itemUrl: resultItem.item.url, itemName: resultItem.item.name});
+				resultsElement.insertBefore(resultEl, resultsElement.firstChild);
+				spinnerElement.setAttribute("class", "spinner hidden");
+			} else {
+				spinnerElement.setAttribute("class", "spinner hidden");
+				alert("No results found, select an image that contains an object to scan.");
+			}
+		});
+
+		selector.addListener('image', function(craftarImage) {
+			spinnerElement.setAttribute("class", "spinner");
+			cloudRecognition.search(craftarImage);
+		});
+    }, false);
+  </script>
+
+
+	<title>Demo IR form HTML</title>
+</head>
+<body translate="no">
+	<header>
+		<h1><a href="http://catchoom.com" target="blank"><img src="images/logo.png" alt="Logo catchoom"></a></h1>
+	</header>
+	<div class="container">
+			<form action="#" method="post" accept-charset="utf-8">
+			    <input type="file" name="ir" accept="image/*" id="selectorElement"/>
+			</form>	
+		<div class="spinner hidden" id="spinner"><img src="./images/spinner.gif"></div>
+		<div class="center">
+  			<ul class="ir" id="resultList">
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+
+
+<footer class="footer">
+	<div class="copyright ">
+	<div class="row centerFooter align-center margin-top-small margin-bottom-small">
+	<p class="centerFooter logo-img">
+		<img alt="Logo catchoom" src="http://catchoom.com/wp-content/themes/catchoom/images/logo.png">
+	</p>
+  <p class="align-center"><small>Copyright © 2012-2016. All rights reserved. <a target="_blank" href="http://catchoom.com/website-terms">Website Terms </a> </small></p>
+
+	</div>
+</footer>
+
+
+
+</html>
