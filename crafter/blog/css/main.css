@@ -29,7 +29,7 @@ font-size: 18px;
     margin: 5px;
     border-radius: 5px;
     background-color: #ddde03c9;
-    width: 300px;
+    width: 350px;
 
 }
 .search_bar::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -78,4 +78,12 @@ display:inline-block !important;
   margin-left: 15px;
   cursor: pointer;
   right:10px;
+}
+.body_title
+{
+  border-left: 10px solid #16b9b9;
+  padding: 10px;
+  width: max-content;
+  background-color: #31bbaed9;
+  box-shadow: 1px 2px 7px 0px grey;
 }
