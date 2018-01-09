@@ -25,7 +25,7 @@ define(['jquery'],function(){
         });
         //menu item : click handler
         this.nav_li.click(function(){
-              $(".body_title").text($(this).text());
+              $(".body_title, .article_cat").text($(this).text());
               pointer.toggleMenuList();
         });
         //mobile menu btn: Click handler

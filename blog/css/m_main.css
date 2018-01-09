@@ -1,7 +1,10 @@
-@media all and (max-width: 800px)
+@media all and (max-width: 767px)
 {
   .navbar{
     margin-bottom:5px;
+  }
+  .navbar-header{
+    width:100%
   }
   .m_nav
   {
@@ -9,8 +12,8 @@
   }
   .navbar-nav > li
   {
-  border-left: 10px solid #f1e23c;
-  border-bottom: 1px solid #efad1b63;
+  border-left: 5px solid #f1e23c;
+  margin-bottom: 1px;
   }
   /* Search box */
   .search_bar{
